@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Image Editor</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Simple Image Editor</h2>
+      <div class="wrapper">
+        <div class="editor-pannel">
+          <div class="filter">
+            <label class="title">Filters</label>
+            <div class="options">
+              <button id="brightness" class="active">Brightness</button>
+              <button id="saturation">Saturation</button>
+              <button id="inversion">Inversion</button>
+              <button id="grayscale">Grayscale</button>
+            </div>
+            <div class="slider">
+              <div class="filter-info">
+                <p class="name">Brightness</p>
+                <p class="value">100%</p>
+              </div>
+              <input type="range" name="filter-range" id="filter-range" value="100" min="0" max="200">
+            </div>
+          </div>
+          <div class="rotate">
+            <label class="title">Rotate & Flip</label>
+            <div class="options">
+              <button id="left"><i class="ri-clockwise-line"></i></button>
+              <button id="right"><i class="ri-anticlockwise-line"></i></button>
+              <button id="horizontal"><i class="ri-flip-horizontal-line"></i></button>
+              <button id="vertical"><i class="ri-flip-vertical-line"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="preview-img">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/330px-No-Image-Placeholder.svg.png?20200912122019" alt="preview-img" crossorigin="anonymous">
+        </div>
+      </div>
+      <div class="controls">
+        <button class="reset-filter">Reset Filters</button>
+        <div class="row">
+          <input hidden type="file" class="file-input" accept="image/*">
+          <button class="choose-img">Choose Image</button>
+          <button class="save-img">Save Image</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
